@@ -2,7 +2,7 @@
 
 ### Abstract
 
-While the paper focused on the linguistic harbingers of betrayal, we would like to study the effectiveness of betrayal, as a strategy in the Diplomacy online game. Does betraying your allies improve your odds of winning? To conduct our analysis, we will use a new dataset corresponding to an MySQL database including more than 21’000 games. Using the same method as the authors from the original paper, we will detect players that betrayed their allies and how many times they did so during a game. We will also study how being betrayed influences the behavior of the victim during the rest of the game. Our project will therefore take the analysis one step further than the paper by looking at what happens after the betrayal. Even though the dataset comes from an online strategy game, we believe that the uncovered patterns could provide interesting insights on the impact of betrayal in real-life relationships.
+While the paper focused on the linguistic harbingers of betrayal, we would like to study the effectiveness of betrayal, as a strategy in the Diplomacy online game. Does betraying your allies improve your odds of winning? To conduct our analysis, we will use a new dataset corresponding to an MySQL database including more than 21’000 games. Using the same definition of relationships as the the original paper, we will detect players that betrayed their allies and how many times they did so during a game. We will also study how being betrayed influences the behavior of the victim during the rest of the game. Our project will therefore take the analysis one step further than the paper by looking at what happens after the betrayal, while our paper focused on what happened before. Even though the dataset comes from an online strategy game, we believe that the uncovered patterns could provide interesting insights on the impact of betrayal in real-life relationships.
 
 ### Research Questions 
 
@@ -16,17 +16,24 @@ The questions are in order of importance. The number of answered questions will 
 
 ### Proposed dataset 
 
-List the dataset(s) you want to use, and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you've read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible given the datasets at hand.
+We have found one very rich dataset about the Diplomacy game: **[DiplomacyBoardGame - dataset by maxstrange | data.world](https://data.world/maxstrange/diplomacyboardgame)** - it's a SQL dataset consisting of 5 tables :
+- `games`, with 21197 records
+- `players`, with 150668 records
+- `turns`, representating mostly events within seasons, with 1'005'01 records
+- `units`, representating armies within the game, with 1'205'180 records
+- `orders`, representating military decisions made by players, with 13'039'412 records
 
-**[DiplomacyBoardGame - dataset by maxstrange | data.world](https://data.world/maxstrange/diplomacyboardgame)** - an SQL dataset of the “Diplomacy” online board game consisting of 5 tables (games, orders, players, turns, units) including over 21’000 games
+A first analysis of the dataset revealed that our proposed study is feasible. As showed in the notebook that is present in this repository, it was possible to identify for one game the **acts of friendships** and the **acts of hostility** that plays a central role in the first paper we had studied. Hence, it will be possible to define 'friends' and when a betrayal happens.
+
+*Note about the format of the dataset*: the dataset is provided as a .sql file, which could be opened using 'mysql'. There is a python script called 'read_sql_file.py' which transforms this dataset into '.pickle' object, so that we can work with pandas and not with SQL request. 
 
 ### Methods
 
-**Data collection**:  all tables can be linked to one another with the “game_id” variable and thus each player’s action to a final win or lose result.
+**Data collection**:  all tables can be linked to one another with several identifier variables such as `game_id` or `unit_id`, thus it is possible to reconstruct from all the events of a game who is wining and what relationships exist between the 7 different players.
 
-**Data analysis**: In order to detect all betrayals in a game, each player's orders will be analyzed to find friendships between players and their (potential) downfall. Friendships and betrayals will be defined like in the paper on “ linguistic harbingers of betrayal’, i.e. “we focus on relationships that contain at least two consecutive and reciprocated acts of friendships that span at least three seasons in game time.”  A player is defined as a winner of the game if the variable “won” for the game (identified with its ‘game_id’) is equal to 1. 
+**Data analysis**: In order to detect all betrayals in a game, each player's orders will be analyzed to find friendships between players and their (potential) downfall. Friendships and betrayals will be defined like in the paper on “ linguistic harbingers of betrayal’, i.e. “we focus on relationships that contain at least two consecutive and reciprocated acts of friendships that span at least three seasons in game time.”  A player is defined as a winner of the game if the variable “won” for the game (identified with its ‘game_id’) is equal to 1. In term of the rules, it's often the case when this player controls 18 '' 
 
-**Matching player**:  match players with similar actions and starting locations to see how a betrayal has affected the player (more aggressive orders, e.g. ‘destroy, ‘move’ troops to the enemy’s territory, or betrayals)
+**Matching player**:  match players with similar actions and starting locations (probably using a propensity score) to see how a betrayal has affected the player (more aggressive orders, e.g. ‘destroy, ‘move’ troops to the enemy’s territory, or betrayals)
 
 ### Proposed timeline
 
