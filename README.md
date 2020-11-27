@@ -1,4 +1,4 @@
-## Title : BFTW, Betrayals for the win ?
+## Betrayals for the win 
 
 ### Abstract
 
