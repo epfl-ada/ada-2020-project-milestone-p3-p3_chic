@@ -30,8 +30,8 @@ List the dataset(s) you want to use, and some ideas on how you expect to get, ma
 
 ### Proposed timeline
 
-**Week 12** - downloading and extracting features from SQL database dump / formatting to use panda tools on the dataset, identify betrayals and match victims to non-victims 
-**Week 13** - data analysis (process the data and plot the figures required to answer our research questions)
+**Week 12** - downloading and extracting features from SQL database dump / formatting to use panda tools on the dataset, identify betrayals and match victims to non-victims <br>
+**Week 13** - data analysis (process the data and plot the figures required to answer our research questions)<br>
 **Week 14** - report (figures & analysis), prepare the data story and the video (script, film, edit)
 
 ### Organization within the team
