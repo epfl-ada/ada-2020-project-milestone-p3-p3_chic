@@ -44,9 +44,9 @@ A first analysis of the dataset revealed that our proposed study is feasible. As
 
 ### Organization within the team
 
-- ~~Arthur will handle the downloading and the formatting of the dataset in week 1. ~~
+- ~~Arthur will handle the downloading and the formatting of the dataset in week 1.~~
 - ~~The code will be regularly posted on the github in order for each student to work on each part without disturbing the rest of the team.~~
-- ~~Arthur will work on finding the betrayals in each game using the same criteria as in the first paper. ~~
+- ~~Arthur will work on finding the betrayals in each game using the same criteria as in the first paper.~~
 - ~~In week 2, the key insights will be defined by the whole team and the report will be built on the insights.~~
 - ~~In week 3, writing the report (especially Diane and Taavet), video and data story writing~~
 
