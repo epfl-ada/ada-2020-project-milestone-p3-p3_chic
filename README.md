@@ -8,11 +8,12 @@ While the paper focused on the linguistic harbingers of betrayal, we would like 
 
 - What’s the probability of winning if you betray your allies? How does it change depending on the number of allies betrayed? 
 - What’s the probability of winning if you have been betrayed?
-- How many players did a winner betray on average?
-- Do victims tend to become more aggressive towards all the other players after a betrayal?
-- Do victims tend to overreact against their betrayer after the betrayal?
+- ~~How many players did a winner betray on average?~~
+- ~~Do victims tend to become more aggressive towards all the other players after a betrayal?~~
+- ~~Do victims tend to overreact against their betrayer after the betrayal?~~
+- Can a classifier be trained to predict a betrayal based onorders ? 
 
-The questions are in order of importance. The number of answered questions will depend on the time left. 
+The questions are in order of importance. The number of answered questions will depend on the time left. The striked through questions were the ones not longer relevant after our preliminary analysis. 
 
 ### Proposed dataset 
 
@@ -43,10 +44,13 @@ A first analysis of the dataset revealed that our proposed study is feasible. As
 
 ### Organization within the team
 
-- Arthur will handle the downloading and the formatting of the dataset in week 1. 
-- The code will be regularly posted on the github in order for each student to work on each part without disturbing the rest of the team.
-- Arthur will work on finding the betrayals in each game using the same criteria as in the first paper. 
-- In week 2, the key insights will be defined by the whole team and the report will be built on the insights.
-- In week 3, writing the report (especially Diane and Taavet), video and data story writing
+- ~~Arthur will handle the downloading and the formatting of the dataset in week 1. ~~
+- ~~The code will be regularly posted on the github in order for each student to work on each part without disturbing the rest of the team.~~
+- ~~Arthur will work on finding the betrayals in each game using the same criteria as in the first paper. ~~
+- ~~In week 2, the key insights will be defined by the whole team and the report will be built on the insights.~~
+- ~~In week 3, writing the report (especially Diane and Taavet), video and data story writing~~
 
+- Arthur : data wrangling and processing, coming up with the algorithm and coding it
+- Diane : writing the datastory, ploting graphs and proofreading the notebook
+- Taavet : writing the report, ploting graphs and proofreading the datastory
 
